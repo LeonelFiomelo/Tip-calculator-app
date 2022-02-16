@@ -9,6 +9,39 @@
     <title>Tip calculator app</title>
 </head>
 <body>
-    
+    <main class="container">
+
+        <header class="header">
+            <h1 class="header__title">SPLITTER</h1>
+        </header>
+
+        <section class="section">
+            <div class="bill">
+                <h4 class="bill__title">Bill</h4>
+                <input type="number" placeholder="$" class="bill__input" id="bill__input">
+            </div>
+            <div class="tip">
+                <h4 class="tip__title">Select Tip %</h4>
+                <ul class="tip__list">
+                    <li class="tip__item"><a href="#" class="tip__link">5%</a></li>
+                    <li class="tip__item"><a href="#" class="tip__link">10%</a></li>
+                    <li class="tip__item"><a href="#" class="tip__link">15%</a></li>
+                    <li class="tip__item"><a href="#" class="tip__link">25%</a></li>
+                    <li class="tip__item"><a href="#" class="tip__link">50%</a></li>
+                    <input type="number" placeholder="Custom" class="tip__item tip__item--input" id="tip__item--input">
+                </ul>
+            </div>
+            <div class="people">
+                <h4 class="people__title">Number of People</h4>
+                <input type="people__input" placeholder="n°" class="people__input" id="people__input">
+            </div>
+            <div class="result">
+                <div class="amount">Tip amount</div>
+                <div class="total">Total</div>
+                <div class="reset">Reset</div>
+            </div>
+        </section>
+
+    </main>
 </body>
 </html>
