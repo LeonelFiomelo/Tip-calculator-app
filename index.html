@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="css/main.css">
+    <script src="js/Calculation.js"></script>
     <script src="js/app.js" defer></script>
     <title>Tip calculator app</title>
 </head>
@@ -22,7 +23,7 @@
 
             <div class="bill">
                 <h3 class="bill__h">Bill</h3>
-                <input type="number" placeholder="$" class="bill__input" id="bill__input">
+                <input type="number" placeholder="$ 0" class="bill__input" id="bill__input">
             </div>
 
             <div class="tip">
@@ -39,7 +40,7 @@
 
             <div class="people">
                 <h3 class="people__h">Number of People</h3>
-                <input type="number" placeholder="n°" class="people__input" id="people__input">
+                <input type="number" placeholder="0" class="people__input" id="people__input">
             </div>
 
             <div class="result">
@@ -48,7 +49,7 @@
                         <h4 class="result__display-text-h">Tip Amount</h4>
                         <p class="result__display-text-p">/ person</p>
                     </div>
-                    <div class="result__display-value" id="result__display-value--amount">$0</div>
+                    <div class="result__display-value" id="result__display-value--amount">$ 0</div>
                 </div>
 
                 <div class="result__display">
@@ -56,7 +57,7 @@
                         <h4 class="result__display-text-h">Total</h4>
                         <p class="result__display-text-p">/ person</p>
                     </div>
-                    <div class="result__display-value" id="result__display-value--total">$0</div>
+                    <div class="result__display-value" id="result__display-value--total">$ 0</div>
                 </div>
 
                 <div class="result__reset">

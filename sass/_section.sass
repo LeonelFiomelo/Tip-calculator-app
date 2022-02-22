@@ -1,18 +1,35 @@
 .section
+    max-width: 40rem
+    margin: 0 auto
     padding: 2rem 0
     border-radius: 2.2rem 2.2rem 0 0
     display: grid
     grid-template-rows: 1fr 2fr 1fr 2fr
+    grid-template-columns: 85%
     gap: 1rem
     justify-content: center
     align-items: center
-    background-color: $color-tertiary
+    background-color: #ffffff
 
     .bill
         &__h
             @include h()
         &__input
             @include input()
+            text-align: right
+            color: $color-primary
+            background-color: $color-tertiary
+            background-image: url(../img/bill.svg)
+            background-size: 1.6rem 1.6rem
+            background-repeat: no-repeat
+            background-position: .8rem center
+
+            &::placeholder
+                color: $color-primary
+
+            &:focus
+                outline: solid
+                outline-color: $color-hover
 
     .tip
 
@@ -35,8 +52,8 @@
                 &-button
                     height: 100%
                     width: 100%
-                    margin: .4rem 0
                     border-radius: .4rem
+                    font-size: 1.4rem
                     display: flex
                     justify-content: center
                     align-items: center
@@ -45,14 +62,23 @@
                     background-color: $color-primary
 
                     &:hover
-                        background-color: $color-secondary
+                        color: $color-primary
+                        background-color: $color-hover
 
                 &-input
                     height: 100%
                     width: 100%
                     border-radius: .4rem
                     text-align: center
-                    font-size: 1rem
+                    font-size: 1.4rem
+                    color: $color-primary
+                    background-color: $color-tertiary
+                    &::placeholder
+                        color: $color-primary
+
+                    &:focus
+                        outline: solid
+                        outline-color: $color-hover
 
             &-li--input
                 background: none
@@ -62,9 +88,22 @@
             @include h()
         &__input
             @include input()
+            text-align: right
+            color: $color-primary
+            background-color: $color-tertiary
+            background-image: url(../img/people.svg)
+            background-size: 1.6rem 1.6rem
+            background-repeat: no-repeat
+            background-position: .8rem center
+
+            &::placeholder
+                color: $color-primary
+
+            &:focus
+                outline: solid
+                outline-color: $color-hover
 
     .result
-        width: 100%
         height: 100%
         margin-bottom: 0 0 4rem
         padding: 1.2rem 0
@@ -77,18 +116,20 @@
         justify-content: center
 
         &__display
-            width: 100%
             display: flex
             justify-content: space-between
             align-items: center
 
             &-text
                 &-h
+                    margin: .4rem 0
                     font-size: 1.2rem
                 &-p
+                    color: $color-person
                     font-size: 1rem
 
             &-value
+                color: $color-hover
                 font-size: 2rem
 
         &__reset
@@ -103,4 +144,4 @@
                 border-radius: .6rem
 
                 &:hover
-                    background-color: $color-secondary
+                    background-color: $color-hover

@@ -34,9 +34,8 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 }
 
 .container {
-  max-width: 100vw;
-  color: #124555;
-  background-color: #1aa8ba;
+  color: #00474b;
+  background-color: #c5e4e7;
 }
 
 .header {
@@ -51,14 +50,17 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 }
 
 .section {
+  max-width: 40rem;
+  margin: 0 auto;
   padding: 2rem 0;
   border-radius: 2.2rem 2.2rem 0 0;
   display: grid;
   grid-template-rows: 1fr 2fr 1fr 2fr;
+  grid-template-columns: 85%;
   gap: 1rem;
   justify-content: center;
   align-items: center;
-  background-color: #e5d9ed;
+  background-color: #ffffff;
 }
 .section .bill__h {
   font-size: 1.4rem;
@@ -71,6 +73,20 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
   border: none;
   border-radius: 0.2rem;
   font-size: 1.6rem;
+  text-align: right;
+  color: #00474b;
+  background-color: #d7dadb;
+  background-image: url(../img/bill.svg);
+  background-size: 1.6rem 1.6rem;
+  background-repeat: no-repeat;
+  background-position: 0.8rem center;
+}
+.section .bill__input::placeholder {
+  color: #00474b;
+}
+.section .bill__input:focus {
+  outline: solid;
+  outline-color: #2cbca8;
 }
 .section .tip__h {
   font-size: 1.4rem;
@@ -91,24 +107,34 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 .section .tip__ul-li-button {
   height: 100%;
   width: 100%;
-  margin: 0.4rem 0;
   border-radius: 0.4rem;
+  font-size: 1.4rem;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  color: #e5d9ed;
-  background-color: #124555;
+  color: #d7dadb;
+  background-color: #00474b;
 }
 .section .tip__ul-li-button:hover {
-  background-color: #1aa8ba;
+  color: #00474b;
+  background-color: #2cbca8;
 }
 .section .tip__ul-li-input {
   height: 100%;
   width: 100%;
   border-radius: 0.4rem;
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.4rem;
+  color: #00474b;
+  background-color: #d7dadb;
+}
+.section .tip__ul-li-input::placeholder {
+  color: #00474b;
+}
+.section .tip__ul-li-input:focus {
+  outline: solid;
+  outline-color: #2cbca8;
 }
 .section .tip__ul-li--input {
   background: none;
@@ -124,33 +150,48 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
   border: none;
   border-radius: 0.2rem;
   font-size: 1.6rem;
+  text-align: right;
+  color: #00474b;
+  background-color: #d7dadb;
+  background-image: url(../img/people.svg);
+  background-size: 1.6rem 1.6rem;
+  background-repeat: no-repeat;
+  background-position: 0.8rem center;
+}
+.section .people__input::placeholder {
+  color: #00474b;
+}
+.section .people__input:focus {
+  outline: solid;
+  outline-color: #2cbca8;
 }
 .section .result {
-  width: 100%;
   height: 100%;
   margin-bottom: 0 0 4rem;
   padding: 1.2rem 0;
   border-radius: 0.6rem;
-  color: #e5d9ed;
-  background-color: #124555;
+  color: #d7dadb;
+  background-color: #00474b;
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: 70%;
   justify-content: center;
 }
 .section .result__display {
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .section .result__display-text-h {
+  margin: 0.4rem 0;
   font-size: 1.2rem;
 }
 .section .result__display-text-p {
+  color: #a9acac;
   font-size: 1rem;
 }
 .section .result__display-value {
+  color: #2cbca8;
   font-size: 2rem;
 }
 .section .result__reset {
@@ -165,7 +206,44 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
   border-radius: 0.6rem;
 }
 .section .result__reset-button:hover {
-  background-color: #1aa8ba;
+  background-color: #2cbca8;
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header {
+    height: 10vh;
+    margin: 2rem 0 0;
+  }
+
+  .section {
+    max-width: 60rem;
+    margin: 2rem 0;
+    padding: 2rem;
+    border-radius: 2.2rem;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .section .tip__ul {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .section .result {
+    grid-template-rows: 1fr 1fr 2fr;
+    grid-template-columns: 80%;
+    grid-row: 1/4;
+    grid-column: 2/3;
+  }
+  .section .result__reset {
+    align-self: flex-end;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

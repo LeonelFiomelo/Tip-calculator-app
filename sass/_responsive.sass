@@ -1,0 +1,39 @@
+@media screen and (min-width: 1024px)
+    .container
+        min-height: 100vh
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+    
+    .header
+        height: 10vh
+        margin: 2rem 0 0
+
+    .section
+        max-width: 60rem
+        margin: 2rem 0
+        padding: 2rem
+        border-radius: 2.2rem
+        grid-template-rows: 1fr 2fr 1fr
+        grid-template-columns: repeat(2, 1fr)
+
+        .bill
+            
+        
+        .tip
+            &__ul
+                grid-template-rows: repeat(2, 1fr)
+                grid-template-columns: repeat(3, 1fr)
+
+        .people
+            
+
+        .result
+            grid-template-rows: 1fr 1fr 2fr
+            grid-template-columns: 80%
+            grid-row: 1 / 4
+            grid-column: 2 / 3
+
+            &__reset
+                align-self: flex-end
